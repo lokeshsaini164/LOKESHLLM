@@ -1,0 +1,24 @@
+{
+  "servers": {
+    "playwright": {
+      "type": "http",
+      "url": "http://localhost:9339/mcp"
+    },
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "-e",
+        "GITHUB_HOST",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "label": "GitHub MCP (docker)",
+      "description": "GitHub MCP via Docker; reads GITHUB_PERSONAL_ACCESS_TOKEN from environment"
+    }
+  }
+}
+
